@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Basic card style used throughout */
+.card {
+  @apply bg-white border border-gray-200 rounded p-5 shadow-sm;
+}
+
+/* Form field */
+.field {
+  @apply w-full border border-gray-300 rounded px-3 py-2 text-sm
+         focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.btn {
+  @apply bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium
+         hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-red {
+  @apply bg-red-600 text-white px-4 py-2 rounded text-sm font-medium
+         hover:bg-red-700 disabled:opacity-50;
+}
+
+.btn-outline {
+  @apply border border-gray-300 bg-white text-gray-700 px-4 py-2 rounded text-sm
+         hover:bg-gray-50;
+}
