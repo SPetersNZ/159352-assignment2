@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 const AIRPORT_NAMES: Record<string, string> = {
   NZNE: 'Dairy Flat Airport', YSSY: 'Sydney Airport',
@@ -207,4 +208,12 @@ function formatDate(iso: string) {
   return new Date(y, m - 1, d).toLocaleDateString('en-NZ', {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
   })
+}
+
+export default function Page() {
+  return (
+      <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
+        <ConfirmationPage />
+      </Suspense>
+  )
 }
