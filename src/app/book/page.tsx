@@ -29,7 +29,7 @@ interface Schedule {
   bookings: any[]
 }
 
-export function BookContent() {
+function BookContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const id = searchParams.get('id')
