@@ -30,7 +30,7 @@ interface BookingInfo {
   aircraftName: string
 }
 
-export function ConfirmationPage() {
+export function ConfirmationContent() {
   const searchParams = useSearchParams()
   const ref = searchParams.get('ref')
 
@@ -213,7 +213,7 @@ function formatDate(iso: string) {
 export default function Page() {
   return (
       <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
-        <ConfirmationPage />
+        <ConfirmationContent />
       </Suspense>
   )
 }

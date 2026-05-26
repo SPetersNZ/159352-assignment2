@@ -29,7 +29,7 @@ interface Schedule {
   bookings: any[]
 }
 
-export function BookPage() {
+export function BookContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const id = searchParams.get('id')
@@ -198,7 +198,7 @@ function formatDate(iso: string) {
 export default function Page() {
   return (
       <Suspense fallback={<p className="text-gray-500">Loading...</p>}>
-        <BookPage />
+        <BookContent />
       </Suspense>
   )
 }
