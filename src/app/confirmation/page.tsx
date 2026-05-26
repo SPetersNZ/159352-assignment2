@@ -30,7 +30,7 @@ interface BookingInfo {
   aircraftName: string
 }
 
-export default function ConfirmationPage() {
+export function ConfirmationPage() {
   const searchParams = useSearchParams()
   const ref = searchParams.get('ref')
 
